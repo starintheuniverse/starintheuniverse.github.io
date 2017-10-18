@@ -1,0 +1,4 @@
+<a href="https://linkedin.com/in/{{ include.username }}">
+  <span class="icon icon--linkedin">{% include icon-linkedin.svg %}</span>
+  {% if include.hide_text != true %}<span class="username">{{ include.username }}</span>{% endif %}
+</a>

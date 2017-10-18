@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <div id="welcome" class="homerow clear-fix">
+    <div class="home-content">
+
+      <div class="contact">
+        <img id="profile-pic" src="{{site.profile-pic}}" alt="{{site.profile-pic-alt}}">
+        {% include social-media-list.html %}
+      </div>
+
+      <h1 class="page-heading">Welcome!</h1>
+      <p> My name is Masado Ishii. I like helping people, thinking about math, and designing computer programs. </p>
+      <p> Below is a sample of my software projects. Expect it to grow with both fresh work and earlier inspirations. </p>
+
+    </div> <!--home-content-->
+  </div> <!--welcome-->
+
+  <div id="projects" class="homerow clear-fix">
+    <div class="home-content">
+
+      <h1>Projects</h1>
+
+      <!--
+       * See Jekyll documentation for post excerpts:
+       * (https://jekyllrb.com/docs/posts/)
+       *
+       * Note: The variable site.projects was created via a custom Jekyll collection.
+       * (https://jekyllrb.com/docs/collections/)
+       *
+       * Note: Project pages with a future date will not be generated.
+       -->
+
+      {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+      {% for project in sorted_projects %}
+        <div class="project-row clear-fix">
+          <div class="project-thumb-box">
+            <a href="{{ project.url }}">{% include project-img.html project=project classname='project-thumb' %}</a>
+          </div>
+          <div class="project-content">
+            <h2><a href="{{ project.url }}">{{ project.title | escape }}</a></h2>
+            {{ project.excerpt }}
+          </div>
+        </div>
+      {% endfor %}
+
+    </div> <!--home-content-->
+  </div> <!--projects-->
+
+</div>

@@ -1,0 +1,289 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/*
+ * -----------
+ * Universal.
+ * -----------
+ */
+
+.clear-fix:after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img
+{
+  padding: 0px;
+  border: none;
+  box-shadow: 0px 0px 6px -1px black;
+}
+
+.icon svg
+{
+  vertical-align: middle;
+}
+
+ul.social-media-list
+{
+  list-style-type: square;
+}
+
+body
+{
+  min-width: 100%;
+  display: table;
+}
+
+h1
+{
+  margin-top: 0px;
+}
+
+
+
+/*
+ * -----------
+ * Header.
+ * -----------
+ */
+
+
+#header_wrap .inner
+{
+  padding: 10px 10px 10px 10px;
+}
+
+header.inner
+{
+  width: 80%;
+  max-width: 1200px;
+}
+
+
+#logo
+{
+  height: 200px;
+  vertical-align: middle;  /* Want logo and banner-text-box to have middles aligned. */
+  display: inline-block;
+  margin-right: 30px;
+  box-shadow: none;
+}
+
+.banner-text-box
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.site-nav
+{
+  background: -webkit-linear-gradient(bottom, #373737, #171717);
+}
+
+.trigger
+{
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0px;
+}
+
+.nav-link
+{
+  display: inline-block;
+  padding: .4rem 5rem;
+  font-size: 20px;
+  color: white;
+  background-color: #88888833;
+  border: 1px solid #00000033;
+  cursor: pointer;
+}
+.nav-link:hover
+{
+  background-color: #88888844;
+}
+
+.nav-dropdown
+{
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu in nav. Adapted from
+ *   https://www.w3schools.com/howto/howto_css_dropdown.asp
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ */
+
+.dropdown-content
+{
+  display: none;  /* Hidden by default. */
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px #00000033;
+  z-index: 1;
+}
+.nav-dropdown:hover .dropdown-content
+{
+  display: block;
+}
+
+.dropdown-content .nav-link
+{
+  display: block;
+  padding: .8rem;
+  white-space: nowrap;
+  color: black;
+}
+
+
+/*
+ * -----------
+ * Footer.
+ * -----------
+ */
+
+footer.inner {
+  width: 80%;
+  max-width: 1200px;
+}
+
+#footer-social-media { text-align: right; }
+#footer-social-media a, #footer-social-media a:hover
+{
+  text-decoration: none;
+}
+.platform { text-align: right; }
+.copyright { text-align: right; }
+
+
+/*
+ * -----------
+ * Body.
+ * -----------
+ */
+#main-content-wrap {
+  background: #c7c7c7;
+}
+
+#main-content.inner
+{
+  max-width: none;
+  padding: 0;
+}
+
+
+
+/*
+ * -----------
+ * Home.
+ * -----------
+ */
+
+.home > div {
+  background: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+}
+
+.home-content {
+  margin: 0 auto;
+  padding: 10px;
+
+  /* To constrain project-content and also have all home-content line up. */
+  /*          (padding)      (margin, image)                              */
+  /*                  \       |                                           */
+  width: calc(95vw + 2*10px + 150px);       /* Shrink P-C to window width if necessary; however... */
+  max-width: calc(960px + 2*10px + 150px);  /* Occupy P-C no more than half estimated monitor-width. */
+}
+
+
+
+/*
+ * Welcome.
+ */
+
+#profile-pic { width: 175px; }
+
+.contact
+{
+  float: right;
+}
+
+
+/*
+ * Projects.
+ */
+
+.project-row
+{
+  margin-bottom: 30px;
+}
+
+.project-thumb
+{
+  width: 100px;
+  margin-left: 20px;
+}
+
+.project-thumb-box
+{
+  float: left;
+  width: 150px;
+}
+
+.project-content
+{
+  margin-left: 150px;
+}
+
+#projects h2, #projects h2 a
+{
+  background: none;
+  color: black;
+  display: inline;
+  padding-bottom: 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #111;
+  margin-bottom: 20px;
+}
+#projects h2 a
+{
+  text-decoration: none;
+}
+#projects h2 a:hover
+{
+  text-decoration: none;
+  color: blue;
+}
+
+
+
+/*
+ * ------------
+ * Page & Post.
+ * ------------
+ */
+
+.post
+{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+/*
+ * --------
+ * Project.
+ * --------
+ */
+
+.project-icon
+{
+  width: 250px;
+  box-shadow: 0px 0px 50px -5px red;
+}

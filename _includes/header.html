@@ -1,0 +1,32 @@
+<!-- Logo, title and subtitle. -->
+<div id="header_wrap" class="outer clear-fix">
+    <header class="inner">
+      <a href="{{ "/" | relative_url }}"><img id="logo" src="/assets/logo.png" alt="Portfolio Logo"></a>
+      <div class="banner-text-box">
+        <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
+        <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+      </div>
+    </header>
+</div>
+
+
+<!-- Navigation bar -->
+<!-- I've opted to manually customize what appears here. -->
+<!-- See (https://www.w3schools.com/howto/howto_css_dropdown.asp) for the hover-dropdown. -->
+<div class="wrapper">
+    <nav class="site-nav">
+      <div class="trigger">
+        <a class="nav-link page-link" href="/">Home</a>
+        <div class="nav-dropdown">
+          <div class="dropdown-trigger nav-link">Projects</div>
+          <div class="dropdown-content">
+            {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+            {% for project in sorted_projects %}
+              <a class="nav-link page-link" href="{{ project.url }}">> {{ project.title | escape }}</a>
+            {% endfor %}
+          </div>
+        </div>
+        <a class="nav-link page-link" href="/about/">About</a>
+      </div>
+    </nav>
+</div>
