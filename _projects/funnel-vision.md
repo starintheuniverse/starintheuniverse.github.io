@@ -4,7 +4,7 @@ date: 2017-07-27
 ---
 
 "FunnelVision" is an OpenGL program and VTK mapper to simulate portal-like visual effects.
-[Video demo of verion 0.2](https://vimeo.com/230228879).
+[Video demo of version 0.2](https://vimeo.com/230228879).
 View [code](https://github.com/starintheuniverse/funnel-vision/)
 and [minimal programmer's documentation](https://starintheuniverse.github.io/funnel-vision/) on GitHub.
 <!--endexcerpt-->

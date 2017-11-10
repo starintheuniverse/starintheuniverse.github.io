@@ -4,7 +4,7 @@ date: 2016-10-31
 ---
 
 I wrote this program for UO CIS441, Computer Graphics (w/ Prof. Hank Childs).
-It takes as input a vector of triangles (vertex locations, vertex colors, vertex normals) + camera and lighting parameters, and renders an image. 
+It takes as input a vector of triangles (represented as 3 vertex locations, 3 vertex colors, 3 vertex normals) + camera and lighting parameters, and renders an image. 
 [Video demo](https://vimeo.com/228142150).
 
 <!--endexcerpt-->
